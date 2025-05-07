@@ -26,7 +26,7 @@ if uploaded_file is not None:
     # Pokud selže nebo nic neextrahujeme, použijeme OCR
     if len(text_output.strip()) < 10:
         st.info("PDF neobsahuje extrahovatelný text, provádím OCR…")
-        images = convert_from_bytes(uploaded_file.read())
+        images = convert_from_bytes(uploaded_file.read(), poppler_path="/usr/bin")
         for image in images:
             text_output += pytesseract.image_to_string(image, lang='ces') + "\n"
 
