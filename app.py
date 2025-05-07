@@ -53,6 +53,7 @@ Z něj prosím vytvoř následující tabulky v přehledném formátu:
 | č.budovy  | na p. č. | Poznámka                      | Způsob využití            |
 |----------|----------|-------------------------------|---------------------------|
 | ...      | ...      | ...                           | ...                       |
+Do poznámky uveď buď "stavba je součástí pozemku" nebo "na pozemku stojí stavba" podle výpisu
 
 ---
 
@@ -64,9 +65,8 @@ Název práva: [např. Zástavní právo smluvní]
 Popis: [např. Pohledávka ve výši... nebo text z výpisu]  
 Oprávnění pro: [z výpisu]  
 Povinnost k: [z výpisu]  
-Poznámka: [pokud je ve výpisu nějaké doplňující info]
 
-Výstup uveď v bodech pro každé právo zvlášť.
+Výstup uveď v nečíslovaných bodech pro každé právo zvlášť.
 """
 
     st.subheader("Prompt pro GPT:")
