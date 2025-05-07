@@ -38,7 +38,7 @@ if uploaded_file is not None:
         prompt = f"""
 Zde je text výpisu z katastru nemovitostí:
 
-{full_text}
+{text_output}
 
 Z něj prosím vytvoř následující tabulky v přehledném formátu:
 
@@ -48,13 +48,13 @@ Z něj prosím vytvoř následující tabulky v přehledném formátu:
 
 | Název údaje         | Hodnota                   |
 |---------------------|---------------------------|
-| Kraj                | [ ]                       |
-| Okres               | [ ]                       |
-| Obec                | [ ]                       |
-| Počet obyvatel      | [ ]                       |(tento údaj najdi na internetu)
-| Katastrální území   | [ ]                       |
-| Část obce           | [ ]                       |
-| LV č.               | [ ]                       |
+| Kraj                |                           |
+| Okres               |                           |
+| Obec                |                           |
+| Počet obyvatel      |                           |
+| Katastrální území   |                           |
+| Část obce           |                           |
+| LV č.               |                           |
 
 ---
 
@@ -71,23 +71,25 @@ Z něj prosím vytvoř následující tabulky v přehledném formátu:
 | č.budovy  | na p. č. | Poznámka                      | Způsob využití            |
 |----------|----------|-------------------------------|---------------------------|
 | ...      | ...      | ...                           | ...                       |
-Do poznámky uveď buď "stavba je součástí pozemku" nebo "na pozemku stojí stavba" podle výpisu
 
 ---
 
-Uveď pouze údaje z textu výpisu a dodrž formát. Pokud některé pole chybí, nech je prázdné.
+**Věcná břemena a jiná práva**
 
-- Všechna věcná břemena a jiná práva ve formátu:
+Uveď každé právo zvlášť v následujícím formátu:
 
 Název práva: [např. Zástavní právo smluvní]  
 Popis: [např. Pohledávka ve výši... nebo text z výpisu]  
-Oprávnění pro: [z výpisu]  
-Povinnost k: [z výpisu]  
+Oprávněný subjekt: [název, adresa, IČO – pokud uvedeno]  
+Dotčené nemovitosti: [čísla parcel nebo jiný popis]  
+Poznámka: [pokud je ve výpisu nějaké doplňující info]
 
-Výstup uveď v nečíslovaných bodech pro každé právo zvlášť.
+---
+
+Uveď pouze údaje z textu výpisu. Pokud některé pole chybí, nech ho prázdné.
 """
 
-  st.subheader("Prompt pro GPT:")
+        st.subheader("Prompt pro GPT:")
         st.code(prompt)
         st.success("Zkopíruj výše uvedený prompt a vlož ho do ChatGPT pro automatické zpracování dat.")
     else:
