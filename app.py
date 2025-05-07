@@ -33,7 +33,7 @@ Z něj prosím vytvoř následující tabulky v přehledném formátu:
 | Kraj                | [ ]                       |
 | Okres               | [ ]                       |
 | Obec                | [ ]                       |
-| Počet obyvatel      | [ ]                       |
+| Počet obyvatel      | [ ]                       |(tento údaj najdi na internetu)
 | Katastrální území   | [ ]                       |
 | Část obce           | [ ]                       |
 | LV č.               | [ ]                       |
