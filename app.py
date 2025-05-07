@@ -22,14 +22,51 @@ Zde je text výpisu z katastru nemovitostí:
 
 {full_text}
 
-Z něj prosím extrahuj následující informace:
-- Parcelní číslo a druh pozemku/stavby
-- Výměru (v m²)
-- Katastrální území
-- Název/názvy vlastníků a jejich podíly
-- Případná věcná břemena nebo omezení vlastnického práva
+Z něj prosím vytvoř následující tabulky v přehledném formátu:
 
-Výstup uveď v přehledných bodech.
+---
+
+**Topografie**
+
+| Název údaje         | Hodnota                   |
+|---------------------|---------------------------|
+| Kraj                | [ ]                       |
+| Okres               | [ ]                       |
+| Obec                | [ ]                       |
+| Počet obyvatel      | [ ]                       |
+| Katastrální území   | [ ]                       |
+| Část obce           | [ ]                       |
+| LV č.               | [ ]                       |
+
+---
+
+**Výpis pozemků**
+
+| Parc.č.   | Výměra m2 | Druh pozemku                | Způsob využití             |
+|----------|-----------|-----------------------------|----------------------------|
+| ...      | ...       | ...                         | ...                        |
+
+---
+
+**Stavby**
+
+| č.budovy  | na p. č. | Poznámka                      | Způsob využití            |
+|----------|----------|-------------------------------|---------------------------|
+| ...      | ...      | ...                           | ...                       |
+
+---
+
+Uveď pouze údaje z textu výpisu a dodrž formát. Pokud některé pole chybí, nech je prázdné.
+
+- Všechna věcná břemena a jiná práva ve formátu:
+
+Název práva: [např. Zástavní právo smluvní]  
+Popis: [např. Pohledávka ve výši... nebo text z výpisu]  
+Oprávnění pro: [z výpisu]  
+Povinnost k: [z výpisu]  
+Poznámka: [pokud je ve výpisu nějaké doplňující info]
+
+Výstup uveď v bodech pro každé právo zvlášť.
 """
 
     st.subheader("Prompt pro GPT:")
