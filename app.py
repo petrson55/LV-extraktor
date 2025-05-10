@@ -78,11 +78,10 @@ Z něj prosím vytvoř následující tabulky v přehledném formátu:
 
 Uveď každé právo zvlášť v následujícím formátu:
 
-Název práva: [např. Zástavní právo smluvní]  
-Popis: [např. Pohledávka ve výši... nebo text z výpisu]  
-Oprávněný subjekt: [název, adresa, IČO – pokud uvedeno]  
-Dotčené nemovitosti: [čísla parcel nebo jiný popis]  
-Poznámka: [pokud je ve výpisu nějaké doplňující info]
+[např. Zástavní právo smluvní]  
+[např. Pohledávka ve výši... nebo text z výpisu]  
+Oprávnění pro: [název, adresa, IČO – pokud uvedeno nebo parcely]  
+Povinnost k: [čísla parcel nebo název, adresa, IČO]  
 
 ---
 
